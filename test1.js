@@ -21,7 +21,6 @@ navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
         const volume = getRMS(dataArray);
 
         const db = 20 * Math.log10(volume / 0.00002);
-        document.getElementById("db-value").textContent = db.toFixed(2) + " dB";
         document.getElementById("volume-value").textContent = volume.toFixed(2);
     }
 
