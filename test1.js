@@ -22,6 +22,9 @@ navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
 
         const db = 20 * Math.log10(volume / 0.00002);
         document.getElementById("volume-value").textContent = volume.toFixed(2);
+        if (volume-value > 100) {
+            document.getElementById("volume-value").textContent = "こんにちは";
+}
     }
 
     update();
